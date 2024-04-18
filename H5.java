@@ -37,25 +37,20 @@ class CircleType extends PointType{
     double x;
     double y;
     
-    CircleType(double x , double y){
-        this.x = x;
-        this.y = y;
+    CircleType(double x , double y, double radius){
         super.setPoint(x,y );
-    }
-    void setRadius(double radius){
         this.radius = radius;
         
     }
     void printRadius(){
         System.out.println( "The radius of the circle is:" + radius);
-        super.showPoint();
         super.returnxy();
     }
     void areaAndcircum(){
-        double area = Math.PI * radius* radius;
-        System.out.println("The area of the circle is:"+area);
+        double area = Math.PI * Math.pow(radius,2);
+        System.out.println("The area of the circle is:" + area);
         double circumference = 2 * Math.PI *radius;
-        System.out.println("The circumference of the circle is: "+circumference);
+        System.out.println("The circumference of the circle is: " + circumference);
     }
 }
 public class H5 { 
