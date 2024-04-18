@@ -40,14 +40,8 @@ class CircleType extends PointType{
     CircleType(double x , double y){
         this.x = x;
         this.y = y;
-        
-
-
         super.setPoint(x,y );
-        
     }
-   
-  
     void setRadius(double radius){
         this.radius = radius;
         
@@ -63,12 +57,7 @@ class CircleType extends PointType{
         double circumference = 2 * Math.PI *radius;
         System.out.println("The circumference of the circle is: "+circumference);
     }
-    
-
 }
-
-
-
 public class H5 { 
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
@@ -79,13 +68,8 @@ public class H5 {
         CircleType c1 = new CircleType(x,y);
         System.out.println("Enter the radius of the circle:");
         double radius= sc.nextDouble();
-       
         c1.setRadius(radius);
         c1.printRadius();
         c1.areaAndcircum();
-
-
     }
-    
-    
 }
