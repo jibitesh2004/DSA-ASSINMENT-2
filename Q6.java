@@ -3,8 +3,6 @@ abstract class Marks{
     double markDSA;
     double percentage;
     abstract void getpercentage();
-
-        
     }
 class CSE extends Marks{
     int algoDesign;
@@ -13,14 +11,9 @@ class CSE extends Marks{
         this.markDSA = markDSA;
         this.markICP = markICP;
     }
-    @Override
     void getpercentage(){
         System.out.println(((markICP + markDSA + algoDesign)/300)*100  + "%");
-
     }
-
-
-    
 }
 class NonCSE extends Marks{
     int enggMechanics;
@@ -29,41 +22,15 @@ class NonCSE extends Marks{
         this.markDSA = markDSA;
         this.markICP = markICP;
     }
-    @Override
     void getpercentage(){
         System.out.println(((markICP + markDSA + enggMechanics)/300)*100 + "%");
-
     }
 }
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 public class Q6 {
     public static void main(String args[]){
         CSE c1 = new CSE(99, 99, 99);
         NonCSE c2 = new NonCSE(100, 100, 100);
         c1.getpercentage();
         c2.getpercentage();
-
     }
-    
 } 
-
